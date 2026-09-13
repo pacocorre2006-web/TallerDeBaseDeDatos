@@ -18,7 +18,7 @@
 
 ¿Cuál de los dos registros fue aceptado?
 
-    El registro que intentó introducir un valor `` `NULL` `` en el campo ` ``nombre` `` fue rechazado por completo por el SGBD.
+    El registro que intentó introducir un valor `` `NULL` `` en el campo `` `nombre` `` fue rechazado por completo por el SGBD.
 
 ¿Por qué?
 
