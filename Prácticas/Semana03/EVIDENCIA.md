@@ -44,16 +44,16 @@ Evita que la base de datos almacene registros incompletos o inválidos, aseguran
 
 ¿Se permitió el segundo registro?
 
-    No, el segundo registro fue rechazado por la base de datos.
+No, el segundo registro fue rechazado por la base de datos.
 
 ¿Qué restricción intervino?
 
-    La restricción `UNIQUE` (nombrada como `uc_nombre`).
+La restricción `UNIQUE` (nombrada como `uc_nombre`).
 
 ¿Qué problema evita `UNIQUE`?
 
-    Evita la duplicidad de información en columnas que deben contener valores exclusivos (en este caso, que existan dos videojuegos con exactamente el mismo nombre).
+Evita la duplicidad de información en columnas que deben contener valores exclusivos (en este caso, que existan dos videojuegos con exactamente el mismo nombre).
 
 ¿En qué campos de tu proyecto tendría sentido utilizarlo?
 
-    En campos como el nombre de un producto, códigos SKU, correos electrónicos o números de serie, donde duplicar la información causaría confusiones o errores de inventario.
+En campos como el nombre de un producto, códigos SKU, correos electrónicos o números de serie, donde duplicar la información causaría confusiones o errores de inventario.
