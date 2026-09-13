@@ -12,7 +12,7 @@
 
 ¿Qué restricción intervino? La `` `PRIMARY KEY` ``.
 
-¿Qué información proporciona el mensaje de error? Indica que hubo una entrada duplicada (`` ´Duplicate entry '1' ``) específicamente para la llave primaria (`` `PRIMARY` ``), impidiendo que se rompa la unicidad de los registros.
+¿Qué información proporciona el mensaje de error? Indica que hubo una entrada duplicada (`` ´Duplicate entry '1'` ``) específicamente para la llave primaria (`` `PRIMARY` ``), impidiendo que se rompa la unicidad de los registros.
 
 ### 🧪 Experimento 2 — Intentemos insertar un valor NULL
 
