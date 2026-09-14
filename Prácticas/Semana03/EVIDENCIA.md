@@ -73,6 +73,10 @@ Prueba 1 (PRIMARY KEY): Intento de duplicar el ID `1` $\rightarrow$ Rechazado po
 
 ## 🧪 Experimento 2 — Intentemos insertar un valor NULL
 
+Prueba 2 (NOT NULL): Intento de insertar `NULL` en `nombre` $\rightarrow$ Rechazado por `ERROR 1048: Column 'nombre' cannot be null`.
+
+![Captura de pantalla](img/captura2.png)
+
 ### 💭 Responde
 
 ¿Cuál de los dos registros fue aceptado?
@@ -97,6 +101,10 @@ Evita que la base de datos almacene registros incompletos o inválidos, aseguran
 
 ## 🧪 Experimento 3 — Provocando un dato duplicado
 
+Prueba 3 (UNIQUE): Intento de duplicar el nombre `'Cyberpunk 2077'` $\rightarrow$ Rechazado por `ERROR 1062: Duplicate entry... for key 'uc_nombre'`.
+
+![Captura de pantalla](img/captura3.png)
+
 ### 💭 Responde
 
 ¿Se permitió el segundo registro?
@@ -116,6 +124,10 @@ Evita la duplicidad de información en columnas que deben contener valores exclu
 En campos como el nombre de un producto, códigos SKU, correos electrónicos o números de serie, donde duplicar la información causaría confusiones o errores de inventario.
 
 ## 🧪 Experimento 4 — Probando DEFAULT
+
+Prueba 4 (DEFAULT): Inserción de `'Elden Ring'` omitiendo el `stock` $\rightarrow$ Aceptado, asignando automáticamente `10` por defecto.
+
+![Captura de pantalla](img/captura4.png)
 
 ### 💭 Responde
 
@@ -141,6 +153,10 @@ En el stock inicial de los videojuegos, una fecha de alta por defecto o un campo
 
 ## 🧪 Experimento 5 — Probemos una condición
 
+Prueba 5 (CHECK): Intento de asignar precio `-150.00` $\rightarrow$ Rechazado por `ERROR 4025: CONSTRAINT 'chk_precio' failed`.
+
+![Captura de pantalla](img/captura5.png)
+
 ### 💭 Responde
 
 ¿Cuál registro fue aceptado?
@@ -164,6 +180,10 @@ Evita que se registren datos lógicamente imposibles o erróneos, como precios n
 El campo `stock` (para evitar existencias negativas) o el campo `cantidad` en la tabla de ventas.
 
 ## 🧪 Experimento 6 — Referencia inexistente
+
+Prueba 6 (FOREIGN KEY): Intento de registrar una venta con `id_videojuego = 999` (inexistente) $\rightarrow$ Rechazado por `ERROR 1452: a foreign key constraint fails`.
+
+![Captura de pantalla](img/captura6.png)
 
 ### 💭 Responde
 
@@ -193,6 +213,12 @@ Evita la inconsistencia de datos (registros huérfanos), garantizando que no se 
 
 ## 🧪 Experimento 7 — Investiga tu propia tabla
 
+En este experimento se audita la estructura final de las tablas Videojuegos y Ventas mediante los comandos DESCRIBE y SHOW CREATE TABLE, con el objetivo de comprobar visualmente la presencia de las claves primarias, foráneas, índices únicos, valores por defecto y reglas de validación en el motor InnoDB.
+
+![Captura de pantalla](img/captura7.png)
+
+![Captura de pantalla](img/captura8.png)
+
 ### 💭 Responde
 
 ¿Qué información muestra `DESCRIBE`?
@@ -214,9 +240,6 @@ En `DESCRIBE`, la columna que actúa como clave foránea (`id_videojuego` en la 
 ¿Por qué es importante poder inspeccionar la definición de una tabla?
 
 Porque nos permite auditar, verificar y comprobar con total certeza qué reglas de integridad, tipos de datos, valores por defecto y relaciones están activas en el SGBD, lo cual es fundamental para corregir errores, dar mantenimiento o documentar el diseño del esquema.
-
-## 🔎 Verificación de la Estructura (`DESCRIBE` y `SHOW CREATE TABLE`)
-(capturas DESCRIBE y SHOW CREATE TABLE)
 
 ## 🧠 14. Investigación
 
