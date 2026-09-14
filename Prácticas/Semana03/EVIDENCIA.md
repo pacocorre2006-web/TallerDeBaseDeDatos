@@ -57,3 +57,27 @@ Evita la duplicidad de información en columnas que deben contener valores exclu
 ¿En qué campos de tu proyecto tendría sentido utilizarlo?
 
 En campos como el nombre de un producto, códigos SKU, correos electrónicos o números de serie, donde duplicar la información causaría confusiones o errores de inventario.
+
+### 🧪 Experimento 4 — Probando DEFAULT
+
+### 💭 Responde
+
+¿Qué valor apareció?
+
+Apareció el valor `10` en la columna `stock` del registro de `'Elden Ring'`.
+
+¿Quién proporcionó ese valor?
+
+El SGBD (MariaDB) de manera automática.
+
+¿El usuario lo escribió?
+
+No, el usuario omitió por completo el campo `stock` al momento de realizar la instrucción `INSERT`.
+
+¿Qué ventaja tiene utilizar valores predeterminados?
+
+Permite agilizar la inserción de datos y garantiza que los campos obligatorios o de control cuenten con un valor estándar y coherente cuando no se provee uno de forma manual.
+
+¿En qué campo de tu proyecto podría ser útil?
+
+En el stock inicial de los videojuegos, una fecha de alta por defecto o un campo de estado (por ejemplo, definir por defecto que un juego está "Disponible").
