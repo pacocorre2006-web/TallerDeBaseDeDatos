@@ -58,7 +58,7 @@ FOREIGN KEY: Aplicada en Ventas(id_videojuego) (fk_ventas_videojuegos) referenci
 
 Prueba 1 (PRIMARY KEY): Intento de duplicar el ID `1` $\rightarrow$ Rechazado por `ERROR 1062: Duplicate entry '1' for key 'PRIMARY'`.
 
-![Captura de pantalla](img/Captura desde 2026-09-12 17-10-48.png)
+![Captura de pantalla](/home/carlos/Escritorio/TallerDeBaseDeDatos/Prácticas/Semana03/img/captura1.png)
 
 ### 💭 Responde
 ¿Qué ocurrió? La base de datos rechazó la inserción del nuevo registro.
