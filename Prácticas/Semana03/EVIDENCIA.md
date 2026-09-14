@@ -14,7 +14,7 @@
 
 ¿Qué información proporciona el mensaje de error? Indica que hubo una entrada duplicada (`` ´Duplicate entry '1'` ``) específicamente para la llave primaria (`` `PRIMARY` ``), impidiendo que se rompa la unicidad de los registros.
 
-### 🧪 Experimento 2 — Intentemos insertar un valor NULL
+## 🧪 Experimento 2 — Intentemos insertar un valor NULL
 
 ### 💭 Responde
 
@@ -38,7 +38,7 @@ Los demás campos de la tabla que no cuentan con esta restricción estricta en s
 
 Evita que la base de datos almacene registros incompletos o inválidos, asegurando que los datos críticos para el sistema siempre tengan información real.
 
-### 🧪 Experimento 3 — Provocando un dato duplicado
+## 🧪 Experimento 3 — Provocando un dato duplicado
 
 ### 💭 Responde
 
@@ -58,7 +58,7 @@ Evita la duplicidad de información en columnas que deben contener valores exclu
 
 En campos como el nombre de un producto, códigos SKU, correos electrónicos o números de serie, donde duplicar la información causaría confusiones o errores de inventario.
 
-### 🧪 Experimento 4 — Probando DEFAULT
+## 🧪 Experimento 4 — Probando DEFAULT
 
 ### 💭 Responde
 
@@ -81,3 +81,27 @@ Permite agilizar la inserción de datos y garantiza que los campos obligatorios 
 ¿En qué campo de tu proyecto podría ser útil?
 
 En el stock inicial de los videojuegos, una fecha de alta por defecto o un campo de estado (por ejemplo, definir por defecto que un juego está "Disponible").
+
+## 🧪 Experimento 5 — Probemos una condición
+
+### 💭 Responde
+
+¿Cuál registro fue aceptado?
+
+Aquel que cumplía con la regla lógica (valores mayores o iguales a cero).
+
+¿Cuál fue rechazado?
+
+El registro que intentó introducir un valor inválido (`-150.00` en el precio).
+
+¿Qué condición establece CHECK?
+
+Que la columna `precio` debe contener obligatoriamente un valor numérico de cero en adelante (`>= 0`).
+
+¿Qué problema evita?
+
+Evita que se registren datos lógicamente imposibles o erróneos, como precios negativos o cantidades fuera de rango.
+
+¿Qué otro campo de tu proyecto podría necesitar una condición?
+
+El campo `stock` (para evitar existencias negativas) o el campo `cantidad` en la tabla de ventas.
