@@ -210,55 +210,55 @@ Evita que existan registros huérfanos en la tabla hija (`Ventas`) apuntando a u
 
 ![Captura de pantalla](img/Imagen01.png)
 
-Explicación: Corresponde al inicio de los errores controlados de inserción. Muestra el intento fallido de insertar un registro con un ID ya existente (1), generando el ERROR 1062 debido a la violación de la restricción PRIMARY KEY.
+**Explicación:** Corresponde al inicio de los errores controlados de inserción. Muestra el intento fallido de insertar un registro con un ID ya existente (1), generando el ERROR 1062 debido a la violación de la restricción PRIMARY KEY.
 
 ![Captura de pantalla](img/imagen02.png)
 
-Explicación: Corresponde a la sección de INSERT y verificación general. Muestra la inserción correcta de un registro tras corregir errores de sintaxis y la posterior consulta con SELECT * FROM Videojuegos; para visualizar los datos cargados.
+**Explicación:** Corresponde a la sección de INSERT y verificación general. Muestra la inserción correcta de un registro tras corregir errores de sintaxis y la posterior consulta con SELECT * FROM Videojuegos; para visualizar los datos cargados.
 
-Captura desde 2026-09-24 19-13-39.png
+![Captura de pantalla](img/imagen03.png)
 
-Explicación: Muestra un error controlado de tipo NOT NULL. El SGBD rechaza la operación (ERROR 1364) por omitir el campo obligatorio nombre.
+**Explicación:** Muestra un error controlado de tipo NOT NULL. El SGBD rechaza la operación (ERROR 1364) por omitir el campo obligatorio nombre.
 
-Captura desde 2026-09-24 19-14-49.png
+![Captura de pantalla](img/imagen04.png)
 
-Explicación: Muestra un error controlado de tipo UNIQUE (uc_nombre), bloqueando la inserción por intentar duplicar el nombre de un videojuego.
+**Explicación:** Muestra un error controlado de tipo UNIQUE (uc_nombre), bloqueando la inserción por intentar duplicar el nombre de un videojuego.
 
-Captura desde 2026-09-24 19-15-20.png
+![Captura de pantalla](img/imagen05.png)
 
-Explicación: Segunda prueba de violación de la restricción UNIQUE al intentar duplicar el nombre "Cyberpunk 2077".
+**Explicación:** Segunda prueba de violación de la restricción UNIQUE al intentar duplicar el nombre "Cyberpunk 2077".
 
-Captura desde 2026-09-24 19-16-13.png
+![Captura de pantalla](img/imagen06.png)
 
-Explicación: Muestra un error de integridad referencial (FOREIGN KEY). Se rechaza la inserción de una venta con un identificador de videojuego inexistente (9999). 
+**Explicación:** Muestra un error de integridad referencial (FOREIGN KEY). Se rechaza la inserción de una venta con un identificador de videojuego inexistente (9999). 
 
-Captura desde 2026-09-24 20-05-02.png
+![Captura de pantalla](img/imagen07.png)
 
-Explicación: Corresponde a la sección de UPDATE (Modificación individual). Muestra el flujo completo: consulta previa (SELECT), ejecución del cambio con UPDATE y WHERE, y verificación posterior.
+**Explicación:** Corresponde a la sección de UPDATE (Modificación individual). Muestra el flujo completo: consulta previa (SELECT), ejecución del cambio con UPDATE y WHERE, y verificación posterior.
 
-Captura desde 2026-09-24 20-05-24.png.
+![Captura de pantalla](img/imagen08.png)
 
-Explicación: Muestra una actualización múltiple de campos, modificando simultáneamente el precio y el stock de un registro específico utilizando su llave primaria.
+**Explicación:** Muestra una actualización múltiple de campos, modificando simultáneamente el precio y el stock de un registro específico utilizando su llave primaria.
 
-Captura desde 2026-09-24 20-06-10.png.
+![Captura de pantalla](img/imagen09.png)
 
-Explicación: Muestra una actualización múltiple controlada por condición (WHERE plataforma = 'Nintendo Switch'), validando el número de filas mediante SELECT ROW_COUNT();.
+**Explicación:** Muestra una actualización múltiple controlada por condición (WHERE plataforma = 'Nintendo Switch'), validando el número de filas mediante SELECT ROW_COUNT();.
 
-Captura desde 2026-09-24 20-06-39.png.
+![Captura de pantalla](img/imagen010.png)
 
-Explicación: Corresponde al inicio de la sección de DELETE (Eliminación controlada). Muestra la consulta previa de un registro de prueba (id = 8), su borrado seguro con WHERE, y la comprobación final de que fue removido (Empty set).
+**Explicación:** Corresponde al inicio de la sección de DELETE (Eliminación controlada). Muestra la consulta previa de un registro de prueba (id = 8), su borrado seguro con WHERE, y la comprobación final de que fue removido (Empty set).
 
-Captura desde 2026-09-24 20-07-08.png.
+![Captura de pantalla](img/imagen11.png)
 
-Explicación: Muestra una prueba de eliminación sobre un registro padre de la tabla relacional.
+**Explicación:** Muestra una prueba de eliminación sobre un registro padre de la tabla relacional.
 
-Captura desde 2026-09-24 20-07-44.png
+![Captura de pantalla](img/imagen12.png)
 
-Explicación: Corresponde al Reto especial de seguridad sobre el peligro de DELETE sin WHERE. Muestra la creación de la tabla temporal prueba_delete, la inserción de 3 registros de prueba, su comprobación mediante SELECT, la ejecución de un DELETE masivo sin condiciones, y la verificación final donde la tabla queda completamente vacía (Empty set).
+**Explicación:** Corresponde al Reto especial de seguridad sobre el peligro de DELETE sin WHERE. Muestra la creación de la tabla temporal prueba_delete, la inserción de 3 registros de prueba, su comprobación mediante SELECT, la ejecución de un DELETE masivo sin condiciones, y la verificación final donde la tabla queda completamente vacía (Empty set).
 
-Captura desde 2026-09-24 20-08-05.png
+![Captura de pantalla](img/imagen13.png)
 
-Explicación: Corresponde al Reto especial de seguridad sobre el peligro de UPDATE sin WHERE. Muestra la creación de la tabla temporal prueba_update, la inserción de registros con estado 'pendiente', la ejecución global de un UPDATE sin WHERE que altera masivamente todos los registros a 'procesado', y el resultado final verificado con SELECT.
+**Explicación:** Corresponde al Reto especial de seguridad sobre el peligro de UPDATE sin WHERE. Muestra la creación de la tabla temporal prueba_update, la inserción de registros con estado 'pendiente', la ejecución global de un UPDATE sin WHERE que altera masivamente todos los registros a 'procesado', y el resultado final verificado con SELECT.
 
 ## 🚨 24. Reto especial — ¿Qué pasaría sin WHERE? (DELETE)
 
