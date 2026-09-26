@@ -212,7 +212,7 @@ Evita que existan registros huérfanos en la tabla hija (`Ventas`) apuntando a u
 
 Explicación: Corresponde al inicio de los errores controlados de inserción. Muestra el intento fallido de insertar un registro con un ID ya existente (1), generando el ERROR 1062 debido a la violación de la restricción PRIMARY KEY.
 
-![Captura de pantalla](img/Imagen02.png)
+![Captura de pantalla](img/imagen02.png)
 
 Explicación: Corresponde a la sección de INSERT y verificación general. Muestra la inserción correcta de un registro tras corregir errores de sintaxis y la posterior consulta con SELECT * FROM Videojuegos; para visualizar los datos cargados.
 
