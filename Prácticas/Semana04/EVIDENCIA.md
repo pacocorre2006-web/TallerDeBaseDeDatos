@@ -1,6 +1,6 @@
 # 🗄️ Práctica 04 — ¡MODIFIQUEMOS LOS DATOS SIN ROMPER LA BASE!
 
-## 1. Objetivo
+## 1. 🎯 Objetivo
 
 Aplicar los comandos del Lenguaje de Manipulación de Datos (DML: INSERT, UPDATE, DELETE) para la gestión, modificación y depuración de registros en una base de datos relacional.
 
@@ -8,13 +8,13 @@ Evaluar el comportamiento del Sistema de Gestión de Bases de Datos (SGBD) ante 
 
 Implementar buenas prácticas en operaciones de actualización y eliminación mediante el uso correcto de filtros condicionales (WHERE) para prevenir modificaciones masivas accidentales.
 
-## 2. Base de datos utilizada
+## 2. 🗄️ Base de datos utilizada
 
 Nombre de la base de datos: `TiendaVideojuegos`
 
 Descripción: Entorno relacional diseñado para administrar el inventario de un establecimiento comercial de videojuegos. Permite registrar catálogos por plataforma, control de precios, stock disponible y el registro de transacciones de venta bajo estrictas reglas de integridad referencial.
 
-## 3. Tablas utilizadas
+## 3. 📋 Tablas utilizadas
 
 Videojuegos (Tabla principal / Padre)
 
