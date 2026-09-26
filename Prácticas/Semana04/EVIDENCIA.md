@@ -244,7 +244,7 @@ Evita que existan registros huérfanos en la tabla hija (`Ventas`) apuntando a u
 
 **Explicación:** Muestra una actualización múltiple controlada por condición (WHERE plataforma = 'Nintendo Switch'), validando el número de filas mediante SELECT ROW_COUNT();.
 
-![Captura de pantalla](img/imagen010.png)
+![Captura de pantalla](img/imagen10.png)
 
 **Explicación:** Corresponde al inicio de la sección de DELETE (Eliminación controlada). Muestra la consulta previa de un registro de prueba (id = 8), su borrado seguro con WHERE, y la comprobación final de que fue removido (Empty set).
 
