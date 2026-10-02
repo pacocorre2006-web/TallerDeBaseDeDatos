@@ -34,18 +34,17 @@ Registra las transacciones comerciales vinculadas al catálogo de videojuegos.
 
 ![Captura de pantalla](img/captura01.png)
 
-## 🧠 11. INVESTIGA
+Se utilizó el comando `SELECT * FROM Videojuegos;` para seleccionar y mostrar todas las columnas disponibles en la tabla `Videojuegos`.
 
-Responde:
+## 🎯 5. SELECT de columnas específicas
 
-1. ¿Qué significa `SELECT`?
-Significa SELECCIONAR y sirve para seleccionar o consultar datos de una tabla de la base de datos.
+![Captura de pantalla](img/captura02.png)
 
-2. ¿Qué significa `FROM`?
-Significa DESDE y es la cláusula que acompaña a SELECT para especificar que tabla se quiere seleccionar.
+Se utilizó el comando `SELECT * FROM Videojuegos;` para seleccionar y mostrar todas las columnas disponibles en la tabla `Videojuegos`, y después se utilizó el comando `SELECT id_videojuego, nombre FROM Videojuegos;` para seleccionar y mostrar únicamente las columnas específicas de `id_videojuego` y `nombre` de los registros.
 
-3. ¿Qué significa `*`?
-Significa Todo o Todos y se utiliza en el comando `SELECT *` para que la base de datos nos devuelva todas las columnas de la tabla seleccionada.
+### 📝 Documenta
 
-4. ¿Qué diferencia existe entre consultar una tabla y modificarla?
-Consultar con el comando `SELECT` solo muestra la información sin modificarla
+| Consulta | ¿Qué devuelve? |
+| :--- | :--- |
+| `SELECT *` | Muestra todas las columnas de la tabla |
+| `SELECT columna1, columna2` | Muestra únicamente las columnas especificadas |
