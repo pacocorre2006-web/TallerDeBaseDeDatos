@@ -10,3 +10,42 @@ Convertir preguntas humanas y necesidades de negocio reales en consultas SQL pre
 
 * **Descripción:** Entorno relacional diseñado para administrar el inventario de un establecimiento comercial de videojuegos. Permite registrar catálogos por plataforma, control de precios, stock disponible y el registro de transacciones de venta bajo estrictas reglas de integridad referencial.
 
+## 3. 📋 Tablas utilizadas
+
+### 🎮 1. Tabla: `Videojuegos`
+Almacena el catálogo general e inventario disponible de los artículos en la tienda.
+* **Estructura y Tipos de Datos:**
+  * `id_videojuego`: `int(11)` (Clave primaria, Auto_increment)
+  * `nombre`: `varchar(100)` (Clave única, No nulo)
+  * `plataforma`: `varchar(50)` (Permite nulos)
+  * `precio`: `decimal(10,2)` (Permite nulos)
+  * `stock`: `int(11)` (Valor predeterminado: 10)
+  * `genero`: `varchar(50)` (Permite nulos)
+
+### 🛒 2. Tabla: `Ventas`
+Registra las transacciones comerciales vinculadas al catálogo de videojuegos.
+* **Estructura y Tipos de Datos:**
+  * `id_venta`: `int(11)` (Clave primaria, Auto_increment)
+  * `id_videojuego`: `int(11)` (Clave foránea relacionada con el catálogo)
+  * `cantidad`: `int(11)` (Permite nulos)
+  * `fecha`: `date` (Permite nulos)
+  
+## 📊 4. SELECT básico
+
+![Captura de pantalla](img/captura01.png)
+
+## 🧠 11. INVESTIGA
+
+Responde:
+
+1. ¿Qué significa `SELECT`?
+Significa SELECCIONAR y sirve para seleccionar o consultar datos de una tabla de la base de datos.
+
+2. ¿Qué significa `FROM`?
+Significa DESDE y es la cláusula que acompaña a SELECT para especificar que tabla se quiere seleccionar.
+
+3. ¿Qué significa `*`?
+Significa Todo o Todos y se utiliza en el comando `SELECT *` para que la base de datos nos devuelva todas las columnas de la tabla seleccionada.
+
+4. ¿Qué diferencia existe entre consultar una tabla y modificarla?
+Consultar con el comando `SELECT` solo muestra la información sin modificarla
