@@ -191,4 +191,81 @@ Es válido y útil permitir valores NULL en situaciones donde la informació es 
 
 * Segunda consulta (`SELECT DISTINCT plataforma FROM Videojuegos;`): Filtra y elimina los duplicados, devolviendo únicamente 4 filas.
 
+## 🔤 13. Alias
 
+![Captura de pantalla](img/captura18.png)
+
+* **Explicación:** Esta consulta selecciona las columnas `nombre` y `precio`, pero cambia sus encabezados en pantalla por `videojuego` y `costo`.
+
+## 🔀 14. AND / OR / NOT
+
+**Consulta A: Dos condiciones utilizando AND**
+
+* Pregunta: ¿Cuáles videojuegos pertenecen a la plataforma PS5 y tienen un precio menor a 50.00?
+
+* SQL:
+`SELECT * FROM Videojuegos WHERE plataforma = 'PS5' AND precio < 50.00;`
+
+* Resultado:
+`FIFA 25` | `PS5` | `34.99`
+
+* Explicación: El operador AND exige que ambas condiciones se cumplan.
+
+**Consulta B: Dos condiciones utilizando OR**
+
+* Pregunta: ¿Qué videojuegos pertenecen a la plataforma PC o a la plataforma Xbox?
+
+* SQL:
+SELECT * FROM Videojuegos WHERE plataforma = 'PC' OR plataforma = 'Xbox';
+
+* Resultado:
+`GTA V` | `Xbox`
+`Cyberpunk 2077` | `PC`
+
+* Explicación: El operador OR es más flexible; basta con que se cumpla al menos una de las condiciones para que el registro sea seleccionado e incluido en los resultados de la consulta.
+
+**Consulta C: Una condición negada utilizando NOT**
+
+* Pregunta: ¿Cuáles videojuegos NO pertenecen a la plataforma PS5?
+
+* SQL:
+`SELECT * FROM Videojuegos WHERE NOT plataforma = 'PS5';`
+
+* Resultado:
+
+`GTA V` | `Xbox`
+`Cyberpunk 2077` | `PC`
+`The Legend of Zelda: Tears of the Kingdom` | `Nintendo Switch`
+
+* Explicación: El operador `NOT` hace que no busque la información que se indique.
+
+![Captura de pantalla](img/captura19.png)
+
+## 📊 15. ORDER BY
+
+**1. Orden ascendente (`ASC`) con columna numérica (Precios)**
+
+![Captura de pantalla](img/captura20.png)
+
+**2. Orden descendente (`DESC`) con columna numérica (Precios)**
+
+![Captura de pantalla](img/captura21.png)
+
+**3. Orden por una columna de texto (Nombres de los videojuegos)**
+
+![Captura de pantalla](img/captura22.png)
+
+## 🔥 16. Diez preguntas de negocio
+
+| # | Pregunta humana | SQL utilizado | Concepto |
+|---|---|---|---|
+| 1 | ¿Cuáles son los videojuegos que pertenecen exclusivamente a la plataforma de mayor preferencia (PS5)? | `SELECT nombre, plataforma FROM Videojuegos WHERE plataforma = 'PS5';` | Filtrado básico por igualdad (`=`) |
+| 2 | ¿Qué títulos del inventario superan las 100 unidades monetarias de costo para considerarse de gama alta? | `SELECT nombre, precio FROM Videojuegos WHERE precio > 100.00;` | Operador de comparación mayor que (`>`) |
+| 3 | ¿Cuáles son los productos más económicos del catálogo cuyo precio es menor a 60.00? | `SELECT nombre, precio FROM Videojuegos WHERE precio < 60.00;` | Operador de comparación menor que (`<`) |
+| 4 | ¿Qué videojuegos cuentan con una disponibilidad en almacén mayor o igual a 20 unidades para evitar desabasto? | `SELECT nombre, stock FROM Videojuegos WHERE stock >= 20;` | Operador mayor o igual que (`>=`) |
+| 5 | ¿Cuáles títulos tienen un stock crítico menor o igual a 5 unidades que requieran reabastecimiento urgente? | `SELECT nombre, stock FROM Videojuegos WHERE stock <= 5;` | Operador menor o igual que (`<=`) |
+| 6 | ¿Qué juegos de la tienda inician con la letra 'F' en su nombre corporativo o comercial? | `SELECT * FROM Videojuegos WHERE nombre LIKE 'F%';` | Búsqueda por patrón inicial (`LIKE`) |
+| 7 | ¿Cuáles videojuegos están disponibles dentro del rango de plataformas principales (PS5, Xbox, PC)? | `SELECT * FROM Videojuegos WHERE plataforma IN ('PS5', 'Xbox', 'PC');` | Filtrado por conjunto de valores (`IN`) |
+| 8 | ¿Qué productos se encuentran en un rango de precios intermedio entre 30.00 y 100.00 unidades? | `SELECT nombre, precio FROM Videojuegos WHERE precio BETWEEN 30.00 AND 100.00;` | Consulta por rangos numéricos (`BETWEEN`) |
+| 9 | ¿Cuáles son los nombres únicos y diferentes de las consolas registradas en el sistema sin mostrar duplicados? | `SELECT DISTINCT plataforma FROM Videojuegos;` | Eliminación de registros repetidos (`DISTINCT`) |
+| 10 | ¿Qué videojuegos del género RPG tienen un precio superior a 500.00 organizados del más caro al más barato? | `SELECT nombre, genero, precio FROM Videojuegos WHERE genero = 'RPG' AND precio > 500.00 ORDER BY precio DESC;` | Consultas combinadas (`AND`) y ordenamiento (`ORDER BY DESC`) |
