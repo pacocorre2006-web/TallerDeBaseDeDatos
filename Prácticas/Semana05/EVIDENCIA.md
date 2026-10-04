@@ -48,3 +48,38 @@ Se utilizó el comando `SELECT * FROM Videojuegos;` para seleccionar y mostrar t
 | :--- | :--- |
 | `SELECT *` | Muestra todas las columnas de la tabla |
 | `SELECT columna1, columna2` | Muestra únicamente las columnas especificadas |
+
+## 🔎 6. WHERE
+
+![Captura de pantalla](img/captura03.png)
+
+Se utilizó el comando `SELECT * FROM Videojuegos WHERE plataforma = 'PS5';` para mostrar los registros de la tabla `Videojuegos` que coincida exactamente con `PS5` para obtener los juegos que le corresponden.
+
+### 📝 INVESTIGACIÓN
+
+¿Qué diferencia existe entre: `=` y: `LIKE`?
+El operador `=` se utiliza para buscar coincidencias exactas.
+El operador `LIKE` se utiliza para realizar busquedas aproximadas o patrones.
+
+## 🔢 7. Operadores
+
+**1. Operador Mayor que (>) [Punto A]**
+¿Cuáles son los videojuegos del inventario cuyo precio es mayor a 100.00?
+![Captura de pantalla](img/captura04.png)
+
+¿Qué significa el resultado?
+Que solo existen dos títulos que su precio es mayor a 100.
+
+**2. Operador Menor que (<) [Punto B]**
+¿Cuáles son los juegos cuyo precio es menor a 100.00?
+![Captura de pantalla](img/captura05.png)
+
+¿Qué significa el resultado?
+Que solo hay dos titulos que su precio sea menor a 100.
+
+
+
+## 🔤 8. LIKE
+
+
+
