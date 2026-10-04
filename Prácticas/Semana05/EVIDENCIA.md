@@ -132,14 +132,14 @@ Permite buscar varios valores evitando escribir varios `OR`.
 
 **A) Una consulta utilizando un rango numérico (Precios)**
 
-`` `SELECT nombre, precio FROM Videojuegos WHERE precio BETWEEN 30.00 AND 100.00;` ``
+`SELECT nombre, precio FROM Videojuegos WHERE precio BETWEEN 30.00 AND 100.00;`
 
 **Explicación:** El operador `BETWEEN` simplifica la búsqueda dentro de un intervalo cerrado, evitando usar condiciones combinadas con operadores de mayor o menor igual.
 
 **B) Una consulta utilizando otro rango que tenga sentido para tu proyecto (Stock)**
 
-`` `SELECT nombre, stock FROM Videojuegos WHERE stock BETWEEN 5 AND 20;`
-`` 
+`SELECT nombre, stock FROM Videojuegos WHERE stock BETWEEN 5 AND 20;`
+
 **Explicación:** Simplifica la busqueda de la cantidad de productos que quedan sin utilizar el mayor o menor igual.
 
 **C) Comprobación de límites**
@@ -157,3 +157,38 @@ Evidencia:
 ![Captura de pantalla](img/captura14.png)
 
 ![Captura de pantalla](img/captura15.png)
+
+## ❓ 11. IS NULL / IS NOT NULL
+
+Se utilizó el comando `SELECT * FROM Videojuegos WHERE genero IS NULL;` para comprobar que no existen registros con valores vacíos o nulos en dicha columna (devolviendo un conjunto vacío), y posteriormente se utilizó el comando `SELECT * FROM Videojuegos WHERE genero IS NOT NULL;` para filtrar y mostrar todos los registros que sí cuentan con un género asignado correctamente.
+
+![Captura de pantalla](img/captura16.png)
+
+### 📝 RESPONDE
+
+1. ¿Cuántos registros tienen NULL?
+Respuesta: 0 registros.
+
+2. ¿Cuántos no tienen NULL?
+Respuesta: 5 registros.
+
+3. ¿Qué diferencia existe entre ambas consultas?
+Respuesta: `IS NULL` busca los registros donde no hay información.
+`IS NOT NULL` hace lo contrario, muestra los registros que si tienen información.
+
+4. ¿Qué problema de información puede revelar un NULL?
+* Datos incompletos o errores de capturas: información que el usuario olvida ingresar.
+* Falta de integridad o estandarización: desconocimiento del dato.
+
+5. ¿Cuándo puede ser válido permitir NULL?
+Es válido y útil permitir valores NULL en situaciones donde la informació es opcional o aún no se conoce.
+
+## 🧹 12. DISTINCT
+
+![Captura de pantalla](img/captura17.png)
+
+* Primera consulta (`SELECT plataforma FROM Videojuegos;`): Muestra los 5 registros totales de la tabla.
+
+* Segunda consulta (`SELECT DISTINCT plataforma FROM Videojuegos;`): Filtra y elimina los duplicados, devolviendo únicamente 4 filas.
+
+
