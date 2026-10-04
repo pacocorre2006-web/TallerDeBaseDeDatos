@@ -64,22 +64,96 @@ El operador `LIKE` se utiliza para realizar busquedas aproximadas o patrones.
 ## 🔢 7. Operadores
 
 **1. Operador Mayor que (>) [Punto A]**
+
 ¿Cuáles son los videojuegos del inventario cuyo precio es mayor a 100.00?
-![Captura de pantalla](img/captura04.png)
+![Captura de pantalla](img/captura05.png)
 
 ¿Qué significa el resultado?
 Que solo existen dos títulos que su precio es mayor a 100.
 
 **2. Operador Menor que (<) [Punto B]**
+
 ¿Cuáles son los juegos cuyo precio es menor a 100.00?
-![Captura de pantalla](img/captura05.png)
+![Captura de pantalla](img/captura06.png)
 
 ¿Qué significa el resultado?
 Que solo hay dos titulos que su precio sea menor a 100.
 
+**3. Operador Mayor o igual que (>=) [Punto C]**
 
+¿Qué videojuegos cuentan con un stock disponible mayor o igual a 10 unidades?
+![Captura de pantalla](img/captura07.png)
+
+¿Qué significa el resultado?
+Que solo muestra los productos que tienen un stock mayor o igual a 10.
+
+**4. Operador Menor o igual que (<=) [Punto D]**
+
+¿Cuáles videojuegos tienen un stock menor o igual a 10 unidades?
+![Captura de pantalla](img/captura08.png)
+
+¿Qué significa el resultado?
+Muestra los productos que están por agotarse
+
+**5. Operador Diferente de (<>) [Punto E]**
+
+¿Cuáles videojuegos NO pertenecen a la plataforma de PS5?
+![Captura de pantalla](img/captura09.png)
+
+¿Qué significa el resultado?
+Excluye todos los juegos de una consola en especifico y muestra los demas.
 
 ## 🔤 8. LIKE
 
+**A) Nombres que comiencen con una letra determinada**
 
+![Captura de pantalla](img/captura10.png)
 
+**Explicación:**Filtra y devuelve únicamente los registros donde el título inicia con la letra "F".
+
+**B) Nombres que terminen con una secuencia determinada**
+![Captura de pantalla](img/captura11.png)
+
+**Explicación:**Muestra registros que terminen con el número "5".
+
+**C) Nombres que contengan una palabra o fragmento**
+![Captura de pantalla](img/captura12.png)
+
+**Explicación:**Muestra solo los registros que comiencen con "The".
+
+## 📋 9. IN 
+
+![Captura de pantalla](img/captura13.png)
+
+**¿Qué hace el operador `IN`?**
+Permite buscar varios valores evitando escribir varios `OR`.
+
+## 📏 10. BETWEEN
+
+**A) Una consulta utilizando un rango numérico (Precios)**
+
+`` `SELECT nombre, precio FROM Videojuegos WHERE precio BETWEEN 30.00 AND 100.00;` ``
+
+**Explicación:** El operador `BETWEEN` simplifica la búsqueda dentro de un intervalo cerrado, evitando usar condiciones combinadas con operadores de mayor o menor igual.
+
+**B) Una consulta utilizando otro rango que tenga sentido para tu proyecto (Stock)**
+
+`` `SELECT nombre, stock FROM Videojuegos WHERE stock BETWEEN 5 AND 20;`
+`` 
+**Explicación:** Simplifica la busqueda de la cantidad de productos que quedan sin utilizar el mayor o menor igual.
+
+**C) Comprobación de límites**
+
+Valor inicial: 30.00
+
+Valor final: 100.00
+
+¿Se incluyó el inicial?: Sí
+
+¿Se incluyó el final?: Sí 
+
+Evidencia:
+
+![Captura de pantalla](img/captura14.png)
+
+![Captura de pantalla](img/captura15.png)
